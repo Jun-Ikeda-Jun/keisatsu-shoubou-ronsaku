@@ -1,0 +1,274 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>答案を点検する｜警察官・消防官の論作文</title><meta name="description" content="書いた答案を貼ると、字数・文体の統一・話し言葉の残りをその場で数えます。受験先を選べば公式の字数指定と照合します。ブラウザの中だけで動くので答案は送信されません。">
+<link rel="canonical" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html">
+<meta property="og:title" content="答案を点検する｜警察官・消防官の論作文"><meta property="og:description" content="書いた答案を貼ると、字数・文体の統一・話し言葉の残りをその場で数えます。受験先を選べば公式の字数指定と照合します。ブラウザの中だけで動くので答案は送信されません。"><meta property="og:type" content="website"><meta property="og:url" content="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/ogp.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"論作文の答案点検","applicationCategory":"EducationalApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Person","name":"池田"},"url":"https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html"}</script>
+<style>
+:root{
+  --ink:#12203a; --sub:#5b6b83; --line:#d9e1ec; --faint:#eef3f9;
+  --navy:#12325e; --navy-d:#0d2445; --accent:#b3541e; --link:#134a8e;
+  --bg:#f7f9fc; --panel:#fff; --warn-bg:#fdf3ec; --warn-line:#e0a878;
+  --r1:6px; --r2:10px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --ink:#e8eef7; --sub:#a7b6cb; --line:#2b3a52; --faint:#1a2540;
+  --navy:#16294a; --navy-d:#101d36; --accent:#e59a5c; --link:#8ab6f0;
+  --bg:#0b1220; --panel:#161f33; --warn-bg:#33241a; --warn-line:#8a5a2e;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.85;
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  font-feature-settings:"palt" 1;}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+a{color:var(--link)}
+a:focus-visible,input:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+
+/* 上部ナビ */
+nav.top{background:var(--navy-d);color:#fff;font-size:13px}
+nav.top .w{display:flex;gap:8px 20px;align-items:baseline;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+nav.top a{white-space:nowrap}
+nav.top a{color:#fff;text-decoration:none;opacity:.85}
+nav.top a:hover{opacity:1;text-decoration:underline}
+nav.top .brand{font-weight:700;font-size:15px;letter-spacing:.04em;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+
+/* 見出し帯 */
+header.hero{background:var(--navy);color:#fff;padding:32px 0 28px}
+header.hero h1{margin:0;font-size:26px;line-height:1.5;font-weight:700;
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+header.hero .lead{margin:12px 0 0;font-size:15px;color:#cfdcef;max-width:34em}
+.kicker{font-size:12px;letter-spacing:.08em;color:#a8c0e0;margin:0 0 8px}
+
+main{padding:24px 0 56px}
+section{margin:0 0 32px}
+section>h2{font-size:20px;margin:0 0 12px;padding-bottom:6px;border-bottom:2px solid var(--ink);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700}
+section h3{font-size:17px;margin:24px 0 8px;font-weight:700}
+.crumb{font-size:13px;color:var(--sub);margin:0 0 20px}
+.crumb a{color:var(--sub)}
+p{margin:0 0 16px}
+
+/* 表 */
+table{border-collapse:collapse;width:100%;font-size:15px;margin:0 0 12px}
+caption{text-align:left;font-size:13px;color:var(--sub);padding-bottom:6px}
+th,td{border-bottom:1px solid var(--line);padding:12px 8px;text-align:left;vertical-align:top}
+thead th{border-bottom:2px solid var(--ink);font-size:13px;color:var(--sub);font-weight:600;white-space:nowrap}
+tbody th{font-weight:600;width:34%}
+td .none{color:var(--sub);font-size:14px}
+.num{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* 実施状況の帯 */
+.notice{border:1px solid var(--warn-line);background:var(--warn-bg);border-radius:var(--r2);
+  padding:16px 20px;margin:0 0 24px}
+.notice b{display:block;font-size:17px;margin-bottom:4px}
+.notice p{margin:0;font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:var(--r1);
+  border:1px solid currentColor;line-height:1.7}
+.tag.stop{color:var(--accent)}
+.tag.ok{color:var(--sub)}
+
+/* 一覧 */
+.list{list-style:none;padding:0;margin:0;display:grid;gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+.list li{background:var(--panel);margin:0}
+.list a{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+  padding:12px 16px;text-decoration:none;color:var(--ink)}
+.list a:hover{background:var(--faint)}
+.list .meta{font-size:13px;color:var(--sub);text-align:right;flex-shrink:0}
+.list .stopped{color:var(--accent);font-size:13px;flex-shrink:0}
+
+/* ガイドの導線 */
+.reads{list-style:none;padding:0;margin:0}
+.reads li{border-top:1px solid var(--line);padding:14px 0}
+.reads li:last-child{border-bottom:1px solid var(--line)}
+.reads a{font-weight:600;text-decoration:none;font-size:16px}
+.reads a:hover{text-decoration:underline}
+.reads span{display:block;font-size:13.5px;color:var(--sub);margin-top:2px}
+
+/* 過去問 */
+.themes{list-style:none;padding:0;margin:0 0 12px}
+.themes li{border-left:3px solid var(--line);padding:2px 0 2px 14px;margin:0 0 14px}
+.themes .y{display:block;font-size:12px;color:var(--sub);letter-spacing:.04em}
+
+.search{width:100%;font-size:16px;padding:12px 14px;border:1px solid var(--line);
+  border-radius:var(--r1);background:var(--panel);color:var(--ink)}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px;padding:0;list-style:none}
+.jump a{font-size:13px;text-decoration:none;color:var(--link);border-bottom:1px solid var(--line)}
+
+.src{font-size:13px;color:var(--sub);margin:0}
+.src a{color:var(--link)}
+article h2{font-size:19px;margin:32px 0 10px;border:0;padding:0}
+article h2:first-child{margin-top:0}
+article ol,article ul{padding-left:1.5em;margin:0 0 16px}
+article li{margin:0 0 8px}
+article blockquote{margin:0 0 16px;padding:12px 16px;background:var(--faint);
+  border-left:3px solid var(--line);border-radius:0 var(--r1) var(--r1) 0;font-size:15px}
+.ex{border:1px solid var(--line);border-radius:var(--r2);padding:16px 20px;margin:0 0 16px;background:var(--panel)}
+.ex .lab{font-size:12px;letter-spacing:.06em;color:var(--sub);display:block;margin-bottom:8px}
+
+footer{border-top:1px solid var(--line);margin-top:40px;padding:24px 0 48px;font-size:13px;color:var(--sub)}
+footer a{color:var(--sub)}
+footer p{margin:0 0 8px}
+
+@media(max-width:600px){
+  header.hero h1{font-size:21px}
+  section>h2{font-size:18px}
+  /* 表を縦積みにする。th を 34% 固定のままだと見出しが1文字ずつ折り返す。
+     ⚠️ 見出し行を隠すだけだと、どの値が字数でどれが制限時間か分からなくなる。
+     各セルに data-label で項目名を出す（2026-08-20 修正） */
+  table.stack thead{position:absolute;left:-9999px}
+  table.stack tbody th,table.stack td{display:block;width:auto;border:0;padding:0}
+  table.stack tbody tr{display:block;border-bottom:1px solid var(--line);padding:12px 0}
+  table.stack tbody th{font-size:15px;color:var(--ink);margin-bottom:4px}
+  table.stack td[data-label]{display:flex;gap:8px;align-items:baseline;padding:2px 0}
+  table.stack td[data-label]::before{content:attr(data-label);flex:0 0 5.5em;font-size:13px;color:var(--sub)}
+  .list a{flex-direction:column;gap:2px}
+  .list .meta{text-align:left}
+}
+
+/* 答案の点検画面。判定は縦1列に積む（3列カードのグリッドを繰り返さない） */
+.btn{font:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--navy);
+  border:0;border-radius:var(--r1);padding:12px 28px;cursor:pointer}
+.btn:hover{background:var(--navy-d)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+textarea.search{font-family:inherit;width:100%}
+select.search{font-family:inherit;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--sub) 50%),linear-gradient(135deg,var(--sub) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.chk{border-top:1px solid var(--line);padding:16px 0}
+.chk:last-child{border-bottom:1px solid var(--line)}
+.chk b{display:block;font-size:17px;margin:6px 0 4px}
+.chk p{margin:0;font-size:15px}
+.chk .y{display:block;font-size:13px;color:var(--sub);margin-top:6px}
+</style><nav class="top"><div class="w"><a class="brand" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">論作文ナビ</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">受験先一覧</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/guide-kakikata-kihon.html">書き方</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html">答案を点検</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">このサイトについて</a></div></nav><header class="hero"><div class="w"><p class="kicker">書いたあとに使う</p>
+<h1>書いた答案を点検する</h1>
+<p class="lead">答案を貼ると、字数・文体・言い回しをその場で数えます。受験先を選べば、公式で確認できた字数の指定と照らし合わせます。</p></div></header>
+<main><div class="w"><p class="crumb"><a href="./">受験先一覧</a> ／ 答案の点検</p>
+
+<section><h2>答案を貼る</h2>
+<p class="note">この画面はブラウザの中だけで数えています。<strong>書いた答案がどこかに送られることはありません。</strong>AIも使っていません。読んで判断が要る部分は、下の「ここでは分からないこと」に書いています。</p>
+<p><label for="team">受験先（字数の指定と照らし合わせます）</label></p>
+<select id="team" class="search">
+<option value="">選ばない（字数の照合をしない）</option>
+<option value="0">沖縄県警察　警察官A（大卒程度）</option><option value="1">宮崎県警察　警察官（再採用）選考</option><option value="2">京都市消防局　中級消防職（高校卒業程度）</option><option value="3">広島県警察　警察官Ａ（一般方式・SPI方式／大学卒業程度）</option><option value="4">広島県警察　警察官Ｂ（高校卒業程度）</option><option value="5">秋田県警察　警察官A（男性・女性／大卒程度）</option><option value="6">秋田県警察　警察官B（男性・女性／高卒程度）</option><option value="7">神奈川県警察　警察官A・キャリアA・術科A（大学卒業程度）</option><option value="8">神奈川県警察　警察官B・キャリアB・術科B（高等学校卒業程度）</option><option value="9">青森県警察　警察官A（大卒程度）</option><option value="10">青森県警察　警察官B（高卒・短大卒程度）</option><option value="11">千葉市消防局　上級（大学卒業程度）</option><option value="12">川崎市消防局　高校卒程度（消防士）</option><option value="13">大分県警察　警察官A（大卒程度）</option><option value="14">大分県警察　警察官B（高卒程度）</option><option value="15">東京消防庁　消防官Ⅰ類（大卒程度）</option><option value="16">東京消防庁　消防官Ⅲ類（高卒程度）</option><option value="17">栃木県警察　大学卒業者</option><option value="18">栃木県警察　高校卒業者等</option><option value="19">福島県警察　警察官A（大卒程度）</option><option value="20">福島県警察　警察官B（高卒程度）</option><option value="21">兵庫県警察　県外共同試験（地元県で論文未実施の場合）</option>
+</select>
+<p class="none" id="spec"></p>
+<p style="margin-top:16px"><label for="ans">答案（下書きのままで構いません）</label></p>
+<textarea id="ans" class="search" rows="12" placeholder="ここに貼り付けてください" style="resize:vertical;line-height:1.9"></textarea>
+<p style="margin-top:12px"><button id="go" class="btn">点検する</button>
+<span id="live" class="none" style="margin-left:12px"></span></p>
+</section>
+
+<section id="out" style="display:none"><h2>点検の結果</h2><div id="res"></div>
+<p class="src">ここに出るのは<strong>数えれば分かること</strong>だけです。数え方も一緒に書いています。合わないと思ったら、ご自身の答案の方を信じてください。</p></section>
+
+<section><h2>ここでは分からないこと</h2>
+<p>下の3つは読んで判断が要るので、この画面では扱いません。自分で確かめてください。</p>
+<ul class="reads">
+<li><a href="guide-ochiru-tokucho.html">課題文に正面から答えているか</a><span>問われたことと、書いたことがずれていないか。悪い例と直した例を並べています</span></li>
+<li><a href="guide-kakikata-kihon.html">柱が2つ立っているか</a><span>取り組みを2つに分けて、それぞれに自分の経験を1つ置けているか</span></li>
+<li><a href="guide-mohan-toan.html">経験が具体的か</a><span>実際に出た課題に対する800字の答案を全文載せています。自分の文章と比べてください</span></li>
+</ul></section>
+</div></main>
+<script>
+var SPECS = [{"team":"沖縄県警察","kubun":"警察官A（大卒程度）","min":900,"max":1100,"how":"1000字程度（「程度」なので前後1割、900〜1100字を目安としています）","minutes":null,"slug":"okinawa-police"},{"team":"宮崎県警察","kubun":"警察官（再採用）選考","min":1080,"max":1320,"how":"1200字程度（「程度」なので前後1割、1080〜1320字を目安としています）","minutes":null,"slug":"miyazaki-police"},{"team":"京都市消防局","kubun":"中級消防職（高校卒業程度）","min":480,"max":600,"how":"600字以内（下限の記載はないので、8割の480字を目安の下限としています）","minutes":"40分","slug":"kyoto-shobo"},{"team":"広島県警察","kubun":"警察官Ａ（一般方式・SPI方式／大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hiroshima-police"},{"team":"広島県警察","kubun":"警察官Ｂ（高校卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hiroshima-police"},{"team":"秋田県警察","kubun":"警察官A（男性・女性／大卒程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":null,"slug":"akita-police"},{"team":"秋田県警察","kubun":"警察官B（男性・女性／高卒程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":null,"slug":"akita-police"},{"team":"神奈川県警察","kubun":"警察官A・キャリアA・術科A（大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"kanagawa-police"},{"team":"神奈川県警察","kubun":"警察官B・キャリアB・術科B（高等学校卒業程度）","min":540,"max":660,"how":"600字程度（「程度」なので前後1割、540〜660字を目安としています）","minutes":"60分","slug":"kanagawa-police"},{"team":"青森県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"aomori-police"},{"team":"青森県警察","kubun":"警察官B（高卒・短大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"aomori-police"},{"team":"千葉市消防局","kubun":"上級（大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"chiba-shobo"},{"team":"川崎市消防局","kubun":"高校卒程度（消防士）","min":800,"max":1000,"how":"800字以上1000字以内","minutes":"60分","slug":"kawasaki-shobo"},{"team":"大分県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"oita-police"},{"team":"大分県警察","kubun":"警察官B（高卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"oita-police"},{"team":"東京消防庁","kubun":"消防官Ⅰ類（大卒程度）","min":600,"max":880,"how":"600字以上800字程度","minutes":"60分","slug":"tokyo-shobocho"},{"team":"東京消防庁","kubun":"消防官Ⅲ類（高卒程度）","min":600,"max":880,"how":"600字以上800字程度","minutes":"60分","slug":"tokyo-shobocho"},{"team":"栃木県警察","kubun":"大学卒業者","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"tochigi-police"},{"team":"栃木県警察","kubun":"高校卒業者等","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"tochigi-police"},{"team":"福島県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":null,"slug":"fukushima-police"},{"team":"福島県警察","kubun":"警察官B（高卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":null,"slug":"fukushima-police"},{"team":"兵庫県警察","kubun":"県外共同試験（地元県で論文未実施の場合）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hyogo-police"}];
+var $ = function(id){ return document.getElementById(id); };
+
+// 話し言葉と書き言葉（guide-genkoyoshi-hyoki.html の表と同じもの）
+var SPOKEN = [
+  ['だけど','だが'],['でも','しかし'],['すごく','非常に'],['とても','大きく'],
+  ['ちゃんと','確実に'],['いろんな','さまざまな'],['みたいな','のような'],
+  ['あと、','また、'],['それと','さらに'],['やっぱり','やはり'],['どんどん','急速に'],['いっぱい','多く']
+];
+
+function countChars(t){
+  // 原稿用紙の数え方に寄せる: 空白と改行を除いた文字数
+  return t.replace(/[\s\u3000]/g,'').length;
+}
+
+function run(){
+  var t = $('ans').value || '';
+  var n = countChars(t);
+  var out = [];
+
+  // ① 字数
+  var i = $('team').value;
+  if (i !== '' && SPECS[i]) {
+    var s = SPECS[i];
+    var ok = n >= s.min && n <= s.max;
+    out.push({
+      ok: ok,
+      head: ok ? '字数は指定の範囲に入っています' : (n < s.min ? '字数が足りません' : '字数が多すぎます'),
+      body: '<b>' + n + '字</b>（空白と改行を除く）。' + s.team + ' ' + s.kubun + ' の目安は <b>' + s.min + '〜' + s.max + '字</b>です。'
+            + '<span class="y">数え方: ' + s.how + '</span>'
+            + (s.minutes ? '<span class="y">制限時間は ' + s.minutes + '。1分あたり ' + Math.round(n / parseInt(s.minutes,10)) + '字のペースで書いた計算になります</span>' : '')
+    });
+  } else {
+    out.push({ ok: null, head: '字数', body: '<b>' + n + '字</b>（空白と改行を除く）。受験先を選ぶと、公式で確認できた指定と照らし合わせます。' });
+  }
+
+  // ② 文体の統一
+  var desu = (t.match(/(です|ます)[。、\n]/g) || []).length;
+  var dearu = (t.match(/(である|だ)[。、\n]/g) || []).length;
+  if (desu > 0 && dearu > 0) {
+    out.push({ ok:false, head:'である体とですます体が混ざっています',
+      body:'「である・だ」で終わる文が <b>' + dearu + '</b>、「です・ます」で終わる文が <b>' + desu + '</b> あります。<strong>どちらかにそろえてください。</strong>論作文は「である体」で書くのが一般的です。' });
+  } else if (desu + dearu > 0) {
+    out.push({ ok:true, head:'文体はそろっています', body:(dearu>desu?'である体':'ですます体') + 'で統一されています（該当する文末 ' + (desu+dearu) + '）。' });
+  }
+
+  // ③ 話し言葉
+  var found = [];
+  for (var k=0;k<SPOKEN.length;k++){
+    var c = t.split(SPOKEN[k][0]).length - 1;
+    if (c > 0) found.push(SPOKEN[k][0] + '（' + c + '回）→ ' + SPOKEN[k][1]);
+  }
+  out.push(found.length
+    ? { ok:false, head:'話し言葉が残っています', body:found.join('<br>') }
+    : { ok:true, head:'話し言葉は見つかりませんでした', body:'よく使われる言い換え対象の語（だけど・すごく・ちゃんと ほか' + SPOKEN.length + '語）は入っていません。' });
+
+  // ④ 言い回しの偏り
+  var beki = (t.match(/すべきである|すべきだ|べきである/g) || []).length;
+  var motome = (t.match(/求められる/g) || []).length;
+  if (beki + motome >= 3) {
+    out.push({ ok:false, head:'「〜すべきである」が多く、評論家の位置から書いている可能性があります',
+      body:'「すべき」系 <b>' + beki + '</b>回、「求められる」<b>' + motome + '</b>回。自分がやる側として書けているか見直してください（<a href="guide-ochiru-tokucho.html">評価が下がる答案の型</a>）。' });
+  }
+
+  // ⑤ 段落
+  var paras = t.split(/\n\s*\n|\n/).filter(function(p){ return p.trim().length > 10; }).length;
+  out.push({ ok: paras>=3 && paras<=6, head:'段落は ' + paras + ' つです',
+    body: paras<3 ? '段落が少なめです。立場・柱1・柱2・まとめ の4段落が目安です。'
+        : paras>6 ? '段落が多めです。1つの段落で1つのことを言えているか見直してください。'
+        : '立場・柱・まとめに分けられていれば、この数で問題ありません。' });
+
+  // ⑥ 自分の経験（目安）
+  var watashi = (t.match(/私(は|が|の)/g) || []).length;
+  out.push({ ok:null, head:'「私」が ' + watashi + ' 回出ています',
+    body: watashi===0 ? '<strong>自分の経験が入っていない可能性があります。</strong>柱それぞれに自分の体験を1つ置くと具体になります。'
+         : 'これは目安です。回数ではなく、<strong>体験が具体的に書けているか</strong>を自分で確かめてください。' });
+
+  $('res').innerHTML = out.map(function(o){
+    var mark = o.ok===true ? '<span class="tag ok">確認</span>' : o.ok===false ? '<span class="tag stop">要修正</span>' : '<span class="tag ok">参考</span>';
+    return '<div class="chk">' + mark + '<b>' + o.head + '</b><p>' + o.body + '</p></div>';
+  }).join('');
+  $('out').style.display = '';
+  $('out').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+$('team').addEventListener('change', function(){
+  var i=this.value;
+  $('spec').innerHTML = (i!=='' && SPECS[i]) ? ('この区分の目安: <b>'+SPECS[i].min+'〜'+SPECS[i].max+'字</b>'+(SPECS[i].minutes?'／'+SPECS[i].minutes:'')+'　<a href="'+SPECS[i].slug+'.html">出典を見る</a>') : '';
+});
+$('ans').addEventListener('input', function(){
+  var n = countChars(this.value);
+  $('live').textContent = n ? (n + '字') : '';
+});
+$('go').addEventListener('click', run);
+</script><footer><div class="w">
+<p>公務員試験の情報を個人で調べて整理している非公式のサイトです。運営は池田（会社員・個人で運営）。所属団体とは関係がありません。</p>
+<p>掲載内容は各団体の公式採用ページを 2026-08-19 に確認したものです。試験の内容は年度ごとに変わります。出願前に必ず公式の試験案内をご自身で確認してください。</p>
+<p>誤りを見つけた方は<a href="https://github.com/Jun-Ikeda-Jun/keisatsu-shoubou-ronsaku/issues/new" target="_blank" rel="noopener">報告フォーム</a>からお知らせください（<a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">訂正の方針</a>）。アクセス数の集計に GoatCounter を使っています（個人を特定する情報は取得していません）。</p>
+</div></footer>
+<script data-goatcounter="https://junikeda.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script></html>

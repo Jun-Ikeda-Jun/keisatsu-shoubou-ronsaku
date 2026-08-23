@@ -125,7 +125,22 @@ footer p{margin:0 0 8px}
   .list a{flex-direction:column;gap:2px}
   .list .meta{text-align:left}
 }
-</style><nav class="top"><div class="w"><a class="brand" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">論作文ナビ</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">受験先一覧</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/guide-kakikata-kihon.html">書き方</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">このサイトについて</a></div></nav><header class="hero"><div class="w">
+
+/* 答案の点検画面。判定は縦1列に積む（3列カードのグリッドを繰り返さない） */
+.btn{font:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--navy);
+  border:0;border-radius:var(--r1);padding:12px 28px;cursor:pointer}
+.btn:hover{background:var(--navy-d)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+textarea.search{font-family:inherit;width:100%}
+select.search{font-family:inherit;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--sub) 50%),linear-gradient(135deg,var(--sub) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.chk{border-top:1px solid var(--line);padding:16px 0}
+.chk:last-child{border-bottom:1px solid var(--line)}
+.chk b{display:block;font-size:17px;margin:6px 0 4px}
+.chk p{margin:0;font-size:15px}
+.chk .y{display:block;font-size:13px;color:var(--sub);margin-top:6px}
+</style><nav class="top"><div class="w"><a class="brand" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">論作文ナビ</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">受験先一覧</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/guide-kakikata-kihon.html">書き方</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html">答案を点検</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">このサイトについて</a></div></nav><header class="hero"><div class="w">
 <p class="kicker">警察47本部・消防21本部を掲載</p>
 <h1>警察官・消防官の論作文試験を、<br>受験先ごとに調べました</h1>
 <p class="lead">字数、制限時間、実施区分、過去に出たテーマ。出典はすべて各団体の公式採用ページです。公表されていない項目は、推測で埋めずにそう書いています。</p></div></header>
@@ -142,6 +157,7 @@ footer p{margin:0 0 8px}
 <ul class="list"><li><a href="sakai-shobo.html" data-n="堺市消防局 大阪府 大阪 堺 堺市 消防 さかい さかいし sakai おおさか しょうぼう">堺市消防局<span class="meta">調査中</span></a></li><li><a href="okayama-shobo.html" data-n="岡山市消防局 岡山県 岡山 岡山市 消防 おかやま おかやまし okayama しょうぼう">岡山市消防局<span class="meta">調査中</span></a></li><li><a href="sapporo-shobo.html" data-n="札幌市消防局 北海道 北海 札幌 札幌市 消防 さっぽろ さっぽろし sapporo しょうぼう">札幌市消防局<span class="meta">調査中</span></a></li><li><a href="hamamatsu-shobo.html" data-n="浜松市消防局 静岡県 静岡 浜松 浜松市 消防 はままつ はままつし hamamatsu しずおか しょうぼう">浜松市消防局<span class="meta">調査中</span></a></li><li><a href="shiga-police.html" data-n="滋賀県警察 滋賀県 滋賀 滋賀県警 滋賀警察 しが しがけんけい shiga 警察 けいさつ">滋賀県警察<span class="meta">調査中</span></a></li><li><a href="kobe-shobo.html" data-n="神戸市消防局 兵庫県 兵庫 神戸 神戸市 消防 こうべ こうべし kobe ひょうご しょうぼう">神戸市消防局<span class="meta">調査中</span></a></li><li><a href="shizuoka-shobo.html" data-n="静岡市消防局 静岡県 静岡 静岡市 消防 しずおか しずおかし shizuoka しょうぼう">静岡市消防局<span class="meta">調査中</span></a></li></ul></section>
 <section><h2>書き方を確認する</h2>
 <ul class="reads">
+<li><a href="tenken.html">書いた答案を点検する</a><span>答案を貼ると、字数・文体・話し言葉をその場で数えます。受験先を選べば公式の字数指定と照合します。</span></li>
 <li><a href="guide-kadai-jitsurei.html">実際に出たテーマ一覧</a><span>公式が公表している課題を6団体ぶん収録。自分の受験先の課題で練習できます。</span></li>
 <li><a href="guide-ronbun-sakubun-chigai.html">「論文」と「作文」はどう違うのか</a><span>論文と作文の呼び分けに全国共通のルールはない。自分の受験先がどちらで呼んでいるかの確認方法と、問われ方の違い。</span></li><li><a href="guide-kakikata-kihon.html">論作文の書き方の基本</a><span>結論を先に置く構成の型と、書き出す前の10分で何を決めるか。実際の課題を使って手順を追う。</span></li><li><a href="guide-mohan-toan.html">答案の実例</a><span>公表されている実際の課題に対して、800字の答案を全文掲載。どこで何をしているかを段落ごとに解説する。</span></li><li><a href="guide-ochiru-tokucho.html">評価が下がる答案の型</a><span>抽象論だけ・自己PRへのすり替え・評論家の目線。よくある3つの型を、悪い例と直した例の両方で示す。</span></li><li><a href="guide-genkoyoshi-hyoki.html">原稿用紙と文体のきまり</a><span>である体か ですます体か、話し言葉、書き出しのマス、句読点の位置。減点の件数がいちばん多い部分。</span></li><li><a href="guide-shobo-sakubun-theme.html">消防官の作文</a><span>志望動機・チームワーク・住民の安全。繰り返し問われるテーマへの向き合い方と、救急に触れる意味。</span></li><li><a href="guide-shakaijin-tenshoku.html">社会人から受ける人へ</a><span>民間経験者採用・社会人枠の論作文で、これまでの仕事をどう書くか。年齢を不利にしないための整理。</span></li><li><a href="guide-menseki-taisaku.html">論作文と面接の関係</a><span>論作文で書いたことと面接で話すことが食い違うと困る。準備の段階でそろえておくための整理。</span></li><li><a href="guide-mohan-toan-shobo.html">消防の答案の実例</a><span>仙台市が公表している令和7年度・消防士（大学の部）の課題に対する800字の答案を全文掲載。段落ごとに解説する。</span></li>
 </ul></section>

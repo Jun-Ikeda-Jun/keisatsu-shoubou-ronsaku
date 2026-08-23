@@ -125,7 +125,22 @@ footer p{margin:0 0 8px}
   .list a{flex-direction:column;gap:2px}
   .list .meta{text-align:left}
 }
-</style><nav class="top"><div class="w"><a class="brand" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">論作文ナビ</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">受験先一覧</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/guide-kakikata-kihon.html">書き方</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">このサイトについて</a></div></nav><header class="hero"><div class="w"><p class="kicker">九州・沖縄｜警察官採用</p><h1>沖縄県警察の論作文試験</h1>
+
+/* 答案の点検画面。判定は縦1列に積む（3列カードのグリッドを繰り返さない） */
+.btn{font:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--navy);
+  border:0;border-radius:var(--r1);padding:12px 28px;cursor:pointer}
+.btn:hover{background:var(--navy-d)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+textarea.search{font-family:inherit;width:100%}
+select.search{font-family:inherit;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--sub) 50%),linear-gradient(135deg,var(--sub) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.chk{border-top:1px solid var(--line);padding:16px 0}
+.chk:last-child{border-bottom:1px solid var(--line)}
+.chk b{display:block;font-size:17px;margin:6px 0 4px}
+.chk p{margin:0;font-size:15px}
+.chk .y{display:block;font-size:13px;color:var(--sub);margin-top:6px}
+</style><nav class="top"><div class="w"><a class="brand" href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">論作文ナビ</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/">受験先一覧</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/guide-kakikata-kihon.html">書き方</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tenken.html">答案を点検</a><a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">このサイトについて</a></div></nav><header class="hero"><div class="w"><p class="kicker">九州・沖縄｜警察官採用</p><h1>沖縄県警察の論作文試験</h1>
 <p class="lead">公式の採用ページで確認できた字数と制限時間を、区分ごとに載せています。</p></div></header>
 <main><div class="w"><p class="crumb"><a href="./">受験先一覧</a> ／ 沖縄県警察</p>
 
@@ -140,7 +155,7 @@ footer p{margin:0 0 8px}
 <table class="stack"><tbody><tr><th>試験の呼び方</th><td>筆記試験（論文・作文）</td></tr><tr><th>この団体の特記事項</th><td>A案内は令和8年4月24日付、警視庁千葉共同試験</td></tr></tbody></table></section>
 
 
-<section><h2>書き方を確認する</h2><ul class="jump"><li><a href="guide-ronbun-sakubun-chigai.html">「論文」と「作文」はどう違うのか</a></li><li><a href="guide-kakikata-kihon.html">論作文の書き方の基本</a></li><li><a href="guide-mohan-toan.html">答案の実例</a></li><li><a href="guide-ochiru-tokucho.html">評価が下がる答案の型</a></li></ul></section>
+<section><h2>書き方を確認する</h2><ul class="jump"><li><a href="guide-ronbun-sakubun-chigai.html">「論文」と「作文」はどう違うのか</a></li><li><a href="guide-kakikata-kihon.html">論作文の書き方の基本</a></li><li><a href="guide-mohan-toan.html">答案の実例</a></li><li><a href="guide-ochiru-tokucho.html">評価が下がる答案の型</a></li><li><a href="tenken.html">書いた答案を点検する</a></li></ul></section>
 <section><h2>九州・沖縄のほかの受験先</h2><ul class="list"><li><a href="fukuoka-police.html">福岡県警察</a></li><li><a href="saga-police.html">佐賀県警察</a></li><li><a href="nagasaki-police.html">長崎県警察</a></li><li><a href="kumamoto-police.html">熊本県警察</a></li><li><a href="oita-police.html">大分県警察</a></li><li><a href="miyazaki-police.html">宮崎県警察</a></li><li><a href="kagoshima-police.html">鹿児島県警察</a></li><li><a href="kitakyushu-shobo.html">北九州市消防局</a></li><li><a href="fukuoka-shobo.html">福岡市消防局</a></li><li><a href="kumamoto-shobo.html">熊本市消防局</a></li></ul></section>
 <section><p class="src">このページに誤りを見つけた方は<a href="https://github.com/Jun-Ikeda-Jun/keisatsu-shoubou-ronsaku/issues/new?title=%E8%AA%A4%E3%82%8A%E3%81%AE%E5%A0%B1%E5%91%8A%3A%20%E6%B2%96%E7%B8%84%E7%9C%8C%E8%AD%A6%E5%AF%9F&amp;body=%EF%BC%88%E3%81%94%E5%8D%94%E5%8A%9B%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%E5%88%86%E3%81%8B%E3%82%8B%E7%AF%84%E5%9B%B2%E3%81%A7%E7%B5%90%E6%A7%8B%E3%81%A7%E3%81%99%EF%BC%89%0A%0A%23%23%20%E3%81%A9%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%0Ahttps%3A%2F%2Fjun-ikeda-jun.github.io%2Fkeisatsu-shoubou-ronsaku%2Fokinawa-police.html%0A%0A%23%23%20%E3%81%A9%E3%81%93%E3%81%8C%E9%81%95%E3%81%86%E3%81%8B%0A%EF%BC%88%E4%BE%8B%3A%20%E5%AD%97%E6%95%B0%E3%81%8C800%E5%AD%97%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8C%E3%80%81%E4%BB%A4%E5%92%8C8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A9%A6%E9%A8%93%E6%A1%88%E5%86%85%E3%81%A7%E3%81%AF1000%E5%AD%97%EF%BC%89%0A%0A%23%23%20%E5%85%AC%E5%BC%8F%E3%81%AE%E3%81%A9%E3%81%93%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%82%E3%82%8B%E3%81%8B%0A%EF%BC%88%E5%88%86%E3%81%8B%E3%82%8C%E3%81%B0URL%E3%81%8BPDF%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%80%82%E5%88%86%E3%81%8B%E3%82%89%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0%E7%A9%BA%E6%AC%84%E3%81%A7%E6%A7%8B%E3%81%84%E3%81%BE%E3%81%9B%E3%82%93%EF%BC%89%0A" target="_blank" rel="noopener">こちらから報告</a>できます（ページのURLと記入枠が入った状態で開きます。GitHubのアカウントが必要です）。</p></section>
 </div></main><footer><div class="w">
