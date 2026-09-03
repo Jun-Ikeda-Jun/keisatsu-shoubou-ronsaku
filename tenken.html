@@ -172,6 +172,7 @@ select.search{font-family:inherit;-webkit-appearance:none;appearance:none;
 </div></main>
 <script>
 var SPECS = [{"team":"沖縄県警察","kubun":"警察官A（大卒程度）","min":900,"max":1100,"how":"1000字程度（「程度」なので前後1割、900〜1100字を目安としています）","minutes":null,"slug":"okinawa-police"},{"team":"宮崎県警察","kubun":"警察官（再採用）選考","min":1080,"max":1320,"how":"1200字程度（「程度」なので前後1割、1080〜1320字を目安としています）","minutes":null,"slug":"miyazaki-police"},{"team":"京都市消防局","kubun":"中級消防職（高校卒業程度）","min":480,"max":600,"how":"600字以内（下限の記載はないので、8割の480字を目安の下限としています）","minutes":"40分","slug":"kyoto-shobo"},{"team":"広島県警察","kubun":"警察官Ａ（一般方式・SPI方式／大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hiroshima-police"},{"team":"広島県警察","kubun":"警察官Ｂ（高校卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hiroshima-police"},{"team":"秋田県警察","kubun":"警察官A（男性・女性／大卒程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":null,"slug":"akita-police"},{"team":"秋田県警察","kubun":"警察官B（男性・女性／高卒程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":null,"slug":"akita-police"},{"team":"神奈川県警察","kubun":"警察官A・キャリアA・術科A（大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"kanagawa-police"},{"team":"神奈川県警察","kubun":"警察官B・キャリアB・術科B（高等学校卒業程度）","min":540,"max":660,"how":"600字程度（「程度」なので前後1割、540〜660字を目安としています）","minutes":"60分","slug":"kanagawa-police"},{"team":"青森県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"aomori-police"},{"team":"青森県警察","kubun":"警察官B（高卒・短大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"aomori-police"},{"team":"千葉市消防局","kubun":"上級（大学卒業程度）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"chiba-shobo"},{"team":"川崎市消防局","kubun":"高校卒程度（消防士）","min":800,"max":1000,"how":"800字以上1000字以内","minutes":"60分","slug":"kawasaki-shobo"},{"team":"大分県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"oita-police"},{"team":"大分県警察","kubun":"警察官B（高卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":"60分","slug":"oita-police"},{"team":"東京消防庁","kubun":"消防官Ⅰ類（大卒程度）","min":600,"max":880,"how":"600字以上800字程度","minutes":"60分","slug":"tokyo-shobocho"},{"team":"東京消防庁","kubun":"消防官Ⅲ類（高卒程度）","min":600,"max":880,"how":"600字以上800字程度","minutes":"60分","slug":"tokyo-shobocho"},{"team":"栃木県警察","kubun":"大学卒業者","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"tochigi-police"},{"team":"栃木県警察","kubun":"高校卒業者等","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"tochigi-police"},{"team":"福島県警察","kubun":"警察官A（大卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":null,"slug":"fukushima-police"},{"team":"福島県警察","kubun":"警察官B（高卒程度）","min":640,"max":800,"how":"800字以内（下限の記載はないので、8割の640字を目安の下限としています）","minutes":null,"slug":"fukushima-police"},{"team":"兵庫県警察","kubun":"県外共同試験（地元県で論文未実施の場合）","min":720,"max":880,"how":"800字程度（「程度」なので前後1割、720〜880字を目安としています）","minutes":"60分","slug":"hyogo-police"}];
+var PAY = "";
 var $ = function(id){ return document.getElementById(id); };
 
 // 話し言葉と書き言葉（guide-genkoyoshi-hyoki.html の表と同じもの）
@@ -253,6 +254,7 @@ function run(){
     return '<div class="chk">' + mark + '<b>' + o.head + '</b><p>' + o.body + '</p></div>';
   }).join('');
   $('out').style.display = '';
+  if (PAY && $('paid')) $('paid').style.display = '';
   $('out').scrollIntoView({ behavior:'smooth', block:'start' });
 }
 
@@ -265,10 +267,19 @@ $('ans').addEventListener('input', function(){
   $('live').textContent = n ? (n + '字') : '';
 });
 $('go').addEventListener('click', run);
+// 有料の添削へ。答案はこのブラウザに置いてから決済ページへ移る（決済後に tensaku.html が読む）。
+if (PAY && $('buy')) $('buy').addEventListener('click', function(){
+  var t = $('ans').value || '';
+  if (countChars(t) < 100) { alert('答案が短すぎます（100字以上で貼ってください）'); return; }
+  var i = $('team').value, s = (i !== '' && SPECS[i]) ? SPECS[i] : {};
+  try { localStorage.setItem('tensaku_draft', JSON.stringify({ text: t, team: s.team || '', kubun: s.kubun || '', min: s.min || null, max: s.max || null, minutes: s.minutes || null, at: Date.now() })); }
+  catch(e) { alert('このブラウザに答案を一時保存できませんでした。プライベートブラウズを解除してください。'); return; }
+  location.href = PAY;
+});
 </script><footer><div class="w">
 <p>公務員試験の情報を個人で調べて整理している非公式のサイトです。運営は池田（会社員・個人で運営）。所属団体とは関係がありません。</p>
 <p>掲載内容は各団体の公式採用ページを 2026-08-19 に確認したものです。試験の内容は年度ごとに変わります。出願前に必ず公式の試験案内をご自身で確認してください。</p>
-<p>誤りを見つけた方は<a href="https://github.com/Jun-Ikeda-Jun/keisatsu-shoubou-ronsaku/issues/new" target="_blank" rel="noopener">報告フォーム</a>からお知らせください（<a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">訂正の方針</a>）。アクセス数の集計に GoatCounter を使っています（個人を特定する情報は取得していません）。</p>
+<p>誤りを見つけた方は<a href="https://github.com/Jun-Ikeda-Jun/keisatsu-shoubou-ronsaku/issues/new" target="_blank" rel="noopener">報告フォーム</a>からお知らせください（<a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/about.html">訂正の方針</a>・<a href="https://jun-ikeda-jun.github.io/keisatsu-shoubou-ronsaku/tokushoho.html">特定商取引法に基づく表記</a>）。アクセス数の集計に GoatCounter を使っています（個人を特定する情報は取得していません）。</p>
 </div></footer>
 <script data-goatcounter="https://junikeda.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script></html>
